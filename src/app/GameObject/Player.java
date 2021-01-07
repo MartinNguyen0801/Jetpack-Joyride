@@ -46,6 +46,7 @@ public class Player extends GameObjects implements KeyListener{
             else
             {
                 this.setY(550);
+                state = PLAYER.Run;
             }
         }
     }

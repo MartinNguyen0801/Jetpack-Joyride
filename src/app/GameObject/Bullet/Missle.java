@@ -6,6 +6,7 @@ import GameObject.*;
 
 public class Missle extends Bullet {
     private long time = System.currentTimeMillis();
+    int n = 0;
 
     public Missle(int x, int y)
     {
@@ -18,7 +19,12 @@ public class Missle extends Bullet {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(load.missle.getCurrentImage(), this.getX(), this.getY(), 100, 100, null);
+        g.drawImage(load.missle.getCurrentImage(), getX(), this.getY(), 100, 100, null);
+            n++;
+            if(n % 60 == 0)
+            {
+                load.missle.update();
+            }
     }
 
     @Override

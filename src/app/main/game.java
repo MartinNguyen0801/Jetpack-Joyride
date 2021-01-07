@@ -101,7 +101,7 @@ class game extends Canvas implements Runnable{
         for(int i = 0; i <= num; i++)
         {
             int col = ran.nextInt(11);
-            int obj = ran.nextInt(100);
+            int obj = ran.nextInt(300);
 
             if(obj == 0)
             {
